@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receiving</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/receiving-icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          class="image-logo-header"
+          src="../images/dashboard-logo.png"
+          alt="dashboard-logo"
+        />
+        <h1>Flooring Warehouse Manager</h1>
+      </header>
+      <nav>
+        <ul class="nav-ul">
+          <li>
+            <a href="../index.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="../receiving/receiving.html" class="active-menu"
+              ><i class="fas fa-dolly"></i> Receiving</a
+            >
+          </li>
+          <li>
+            <a href="../shipping/shipping.html"
+              ><i class="fas fa-truck"></i> Ship</a
+            >
+          </li>
+          <li>
+            <a href="../inventory/inventory.html"
+              ><i class="fas fa-boxes"></i> Inventory</a
+            >
+          </li>
+          <li>
+            <a href="../report/report.html"
+              ><i class="fas fa-file-alt"></i> Reports</a
+            >
+          </li>
+          <li>
+            <a href="../reps/reps.html"
+              ><i class="fas fa-users"></i> Sales Reps</a
+            >
+          </li>
+          <li>
+            <a href="../materials/materials.html"
+              ><i class="fas fa-cubes"></i> Materials</a
+            >
+          </li>
+          <li><a href="../lorem-ipsum/lorem.html">Lorem ipsum</a></li>
+        </ul>
+      </nav>
+      <div class="receiving-main-sections">
+        <section id="receive">
+          <h2>Receive Materials</h2>
+          <form class="receive-form">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="">--Select Category--</option>
+              <option>Underlays</option>
+              <option>Adhesives</option>
+              <option>Carpets</option>
+              <option>Hardwood Flooring</option>
+              <option>Vinyl Sheets</option>
+              <option>Others</option>
+            </select>
+
+            <label for="materialName">Material Name</label>
+            <input
+              type="text"
+              id="materialName"
+              name="materialName"
+              placeholder="e.g. GlueMax Pro"
+              required
+            />
+
+            <label for="quantity">Quantity</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              required
+            />
+
+            <label for="unit">Unit</label>
+            <select id="unit" name="unit" required>
+              <option value="">--Select Unit--</option>
+              <option>Rolls</option>
+              <option>Sq ft</option>
+              <option>Gallons</option>
+              <option>Boxes</option>
+            </select>
+
+            <label for="supplier">Supplier Name</label>
+            <input
+              type="text"
+              id="supplier"
+              name="supplier"
+              placeholder="e.g. Flooring Co."
+              required
+            />
+
+            <label for="date">Date Received</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="notes">Notes (optional)</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="3"
+              placeholder="Any additional details..."
+            ></textarea>
+
+            <button type="submit">Receive Material</button>
+          </form>
+        </section>
+        <section id="receive-contents">
+          <h2>The Last 10 Receiving items&#58;</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Picture</th>
+                <th>Category</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Rep</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Example row -->
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/BlueHC.webp"
+                    alt="BlueHC-underlay"
+                  />
+                </td>
+                <td>Underlay</td>
+                <td>Blue Healthier Choice</td>
+                <td>50</td>
+                <td>Rolls</td>
+                <td>Matt</td>
+                <td>6/21/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/goldHC.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Underlay</td>
+                <td>Gold Healthier Choice</td>
+                <td>30</td>
+                <td>Rolls</td>
+                <td>Kevin</td>
+                <td>6/21/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/GreenHC.webp"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Underlay</td>
+                <td>Green Healthier Choice</td>
+                <td>30</td>
+                <td>Rolls</td>
+                <td>Kevin</td>
+                <td>6/21/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/TrueMelodyCarpet.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Carpet</td>
+                <td>True Melody</td>
+                <td>800</td>
+                <td>SF</td>
+                <td>Kevin</td>
+                <td>6/20/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/LaminateFlooring.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Laminate Flooring</td>
+                <td>SPC</td>
+                <td>1200</td>
+                <td>SF</td>
+                <td>Daniel</td>
+                <td>6/19/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/LaminateFlooring.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Laminate Flooring</td>
+                <td>SPC</td>
+                <td>900</td>
+                <td>SF</td>
+                <td>Steve</td>
+                <td>6/18/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/woolCarpet.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Carpet</td>
+                <td>Wool</td>
+                <td>1400</td>
+                <td>SF</td>
+                <td>Maryah</td>
+                <td>6/18/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/TrueMelodyCarpet.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Carpet</td>
+                <td>TrueMelody</td>
+                <td>950</td>
+                <td>SF</td>
+                <td>Maryah</td>
+                <td>6/18/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/LaminateFlooring.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Laminate Flooring</td>
+                <td>SPC</td>
+                <td>1400</td>
+                <td>SF</td>
+                <td>Raitis</td>
+                <td>6/17/2025</td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    class="receiving-images"
+                    src="../images/stock-materials/VinylFlooringSPC.jpg"
+                    alt="Material 2"
+                  />
+                </td>
+                <td>Vinyl Flooring</td>
+                <td>SPC</td>
+                <td>1400</td>
+                <td>SF</td>
+                <td>Raitis</td>
+                <td>6/17/2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

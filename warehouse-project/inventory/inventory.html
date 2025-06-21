@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/inventory-icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Inventory</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inventory</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+      </head>
+      <body>
+        <div id="wrapper">
+        <header>
+          <img
+            class="image-logo-header"
+            src="../images/dashboard-logo.png"
+            alt="dashboard-logo"
+          />
+          <h1>Flooring Warehouse Manager</h1>
+        </header>
+        <nav>
+          <ul class="nav-ul">
+            <li>
+              <a href="../index.html"
+                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="../receiving/receiving.html"
+                ><i class="fas fa-dolly"></i> Receiving</a
+              >
+            </li>
+            <li>
+              <a href="../shipping/shipping.html"
+                ><i class="fas fa-truck"></i> Ship</a
+              >
+            </li>
+            <li>
+              <a href="../inventory/inventory.html" class="active-menu"
+                ><i class="fas fa-boxes"></i> Inventory</a
+              >
+            </li>
+            <li>
+              <a href="../report/report.html"
+                ><i class="fas fa-file-alt"></i> Reports</a
+              >
+            </li>
+            <li>
+              <a href="../reps/reps.html"
+                ><i class="fas fa-users"></i> Sales Reps</a
+              >
+            </li>
+            <li>
+              <a href="../materials/materials.html"
+                ><i class="fas fa-cubes"></i> Materials</a
+              >
+            </li>
+            <li><a href="../lorem-ipsum/lorem.html">Lorem ipsum</a></li>
+          </ul>
+        </nav>
+
+        <main>
+          <section id="inventory">
+            <h2>Inventory Overview</h2>
+
+            <!-- Filter -->
+            <div class="filter-section">
+              <label for="filter">Filter by:</label>
+              <select id="filter">
+                <option value="all">All</option>
+                <option value="underlays">Underlays</option>
+                <option value="adhesives">Adhesives</option>
+                <option value="carpets">Carpets</option>
+                <option value="hardwood-flooring">Hardwood Flooring</option>
+                <option value="vinyl-sheets">Vinyl Sheets</option>
+              </select>
+            </div>
+
+            <!-- Inventory Table -->
+            <table id="inventoryTable">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Unit</th>
+                  <th>Assigned Rep</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-category="underlays" data-rep="matt">
+                  <td>Underlays</td>
+                  <td>Foam Underlay</td>
+                  <td>100</td>
+                  <td>Rolls</td>
+                  <td>Bill</td>
+                </tr>
+                <tr data-category="underlays" data-rep="steve">
+                  <td>Underlays</td>
+                  <td>Gold Healthier Choice</td>
+                  <td>3</td>
+                  <td>Rolls</td>
+                  <td>Steve</td>
+                </tr>
+                <tr data-category="adhesives" data-rep="kevin">
+                  <td>Adhesives</td>
+                  <td>GlueMax Pro</td>
+                  <td>80</td>
+                  <td>Gallons</td>
+                  <td>Matt</td>
+                </tr>
+                <tr data-category="adhesives" data-rep="daniel">
+                  <td>Adhesives</td>
+                  <td>Bona-R851</td>
+                  <td>11</td>
+                  <td>Pails</td>
+                  <td>Daniel</td>
+                </tr>
+                <tr data-category="carpets" data-rep="maryah">
+                  <td>Carpets</td>
+                  <td>Grey Wool Carpet</td>
+                  <td>120</td>
+                  <td>Rolls</td>
+                  <td>Kevin</td>
+                </tr>
+                <tr data-category="hardwood-flooring" data-rep="bill">
+                  <td>Hardwood Flooring</td>
+                  <td>Oak Planks</td>
+                  <td>250</td>
+                  <td>Sq ft</td>
+                  <td>Bill</td>
+                </tr>
+                <tr data-category="vinyl-sheets" data-rep="raitis">
+                  <td>Vinyl Sheets</td>
+                  <td>Classic Vinyl</td>
+                  <td>150</td>
+                  <td>SF</td>
+                  <td>Raitis</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+
+        <footer>
+          <p>© 2025 Ethical Flooring Warehouse</p>
+        </footer>
+
+        <!-- Script -->
+        <script>
+          const filterSelect = document.getElementById("filter");
+          const rows = document.querySelectorAll("#inventoryTable tbody tr");
+
+          filterSelect.addEventListener("change", () => {
+            const value = filterSelect.value;
+            rows.forEach((row) => {
+              const category = row.dataset.category;
+              const rep = row.dataset.rep;
+
+              if (value === "all") {
+                row.style.display = "";
+              } else if (category === value || rep === value) {
+                row.style.display = "";
+              } else {
+                row.style.display = "none";
+              }
+            });
+          });
+        </script>
+      </body>
+      </div>
+    </html>
+  

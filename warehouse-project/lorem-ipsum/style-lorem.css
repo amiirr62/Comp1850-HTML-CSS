@@ -1,0 +1,170 @@
+.header-logo {
+    width: 65px;
+    height: auto;
+}
+
+
+
+
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+  }
+ a:{
+    color: #27db03;
+    background-color: grey;
+ }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: lightseagreen;       /* Light blue background */
+    border: 2px solid #0077b6;       /* Blue border */
+    margin: 20px;  
+                     /* Space outside the section */
+    padding: 10px;                   /* Space inside the section */
+    border-radius: 20px;
+  }
+  
+  /* Style for all articles inside sections */
+  section article {
+   
+    flex:  1 calc(10% - 300px);
+    max-width: 90%;
+    box-sizing: border-box;
+    background-color: #fff8dc;       /* Light yellow background */
+    border: 2px dashed #ff8c00;      /* Orange dashed border */
+    margin-left: 0px;                 /* Space between articles */
+    margin-top:50px ;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+   article img {
+    max-width: 100%;
+      
+    
+}
+  footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* even spacing across */
+    flex-wrap: wrap; /* handles smaller screens */
+  }
+  
+  .footer-column {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
+  
+  .footer-column h2 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-column a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+
+  .checkmark-ul {
+    list-style-image:url("./image/check-mark.jpg");
+  }
+  .lorem-image {
+    float: left;
+    margin-right: 10px;
+    
+  }
+  .floated-p {
+    margin-top: 30px;
+  }
+  .little-roman-type-ol {
+    list-style-type:lower-roman;
+  }
+
+#page2-blockquote {
+    margin-top:50px;
+  background-color: rgb(211, 102, 221);
+  color:#5add0f;
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
+}
+#page2-blockquote cite {
+  background-color: rgb(230, 24, 144);
+  color:white;
+  
+  font-size: 1.1em;
+}
+#page2-pre-code {
+  background-color: #ff8c00;
+  font-size: 1.4em;
+  display: block;
+  color: black;
+}
+
+.data {
+  border-collapse: collapse;
+  
+  
+}
+.div-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data th {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  border: 2px solid black;
+  background-color: rgb(90, 112, 187);
+  color: #ff8c00;
+}
+.data td {
+  border: 2px solid black;
+  background-color: #ffcc00;
+  background-color: rgb(26, 122, 7);
+  color: white;
+  width: 20vh;
+  height:5vh;
+  padding: 5px;
+  text-align: center;
+  
+}
+
+.ads-images {
+    display: flex;
+    justify-content: center;
+    max-height: 100px;
+}

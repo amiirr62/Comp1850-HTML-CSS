@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flooring Inventory Manager</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./images/dashboard-logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <img
+          class="image-logo-header"
+          src="./images/dashboard-logo.png"
+          alt="dashboard-logo"
+        />
+        <h1>Flooring Warehouse Manager</h1>
+      </header>
+      <nav>
+        <ul class="nav-ul">
+          <li>
+            <a href="./index.html" class="active-menu"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="./receiving/receiving.html"
+              ><i class="fas fa-dolly"></i> Receiving</a
+            >
+          </li>
+          <li>
+            <a href="./shipping/shipping.html"
+              ><i class="fas fa-truck"></i> Ship</a
+            >
+          </li>
+          <li>
+            <a href="./inventory/inventory.html"
+              ><i class="fas fa-boxes"></i> Inventory</a
+            >
+          </li>
+          <li>
+            <a href="./report/report.html"
+              ><i class="fas fa-file-alt"></i> Reports</a
+            >
+          </li>
+          <li>
+            <a href="./reps/reps.html"
+              ><i class="fas fa-users"></i> Sales Reps</a
+            >
+          </li>
+          <li>
+            <a href="./materials/materials.html"
+              ><i class="fas fa-cubes"></i> Materials</a
+            >
+          </li>
+          <li><a href="./lorem-ipsum/lorem.html">Lorem ipsum</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <div id="status-div-section">
+          <p>Today's Status:</p>
+          <section id="short-info-horz-bar">
+            <div>
+              <img
+                class="logo-adjust-size"
+                src="./images/scheduled-icon.png"
+                alt="scheduled-icon"
+              />
+              <p>Total Scheduled : 7</p>
+            </div>
+            <div>
+              <img
+                class="logo-adjust-size"
+                src="./images/receiving-icon.png"
+                alt="receiving-icon"
+              />
+              <p>Total Receiving : 4</p>
+            </div>
+            <div>
+              <img
+                class="logo-adjust-size"
+                src="./images/shipping-icon.png"
+                alt="shipping-icon"
+              />
+              <p>Total Shipping : 2</p>
+            </div>
+          </section>
+        </div>
+
+        <section id="current-stock">
+          <div class="stock-div">
+            <table>
+              <h2>Current Stock</h2>
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Quantity</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      class="stock-image-dashboard"
+                      src="./images/stock-materials/psc3-smart-cushion2.webp"
+                      alt=""
+                    />
+                  </td>
+                  <td>Underlay</td>
+                  <td>Smart-Cusion-PSC3</td>
+                  <td>23 rolls</td>
+                  <td>STOCK</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="stock-image-dashboard"
+                      src="./images/stock-materials/P73.jpg"
+                      alt=""
+                    />
+                  </td>
+
+                  <td>Underlay</td>
+                  <td>Voyage-Cusion-P73</td>
+                  <td>12 rolls</td>
+                  <td>STOCK</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="stock-image-dashboard"
+                      src="./images/stock-materials/bona-quantum-r851.webp"
+                      alt=""
+                    />
+                  </td>
+
+                  <td>Adhesives</td>
+                  <td>Bona R-851</td>
+                  <td>26 Pails</td>
+                  <td>STOCK</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="stock-image-dashboard"
+                      src="./images/stock-materials/GreenHC.webp"
+                      alt=""
+                    />
+                  </td>
+
+                  <td>Underlay</td>
+                  <td>Green HC</td>
+                  <td>15 rolls</td>
+                  <td>STOCK</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="stock-image-dashboard"
+                      src="./images/stock-materials/BlueHC.webp"
+                      alt=""
+                    />
+                  </td>
+
+                  <td>Underlay</td>
+                  <td>Blue HC</td>
+                  <td>8 rolls</td>
+                  <td>STOCK</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="add-remove-form">
+            <form>
+              <h3>Add / Remove Item</h3>
+              <input type="text" placeholder="PO#" required />
+              <input type="text" placeholder="Item Name" required />
+              <select>
+                <option value="" disabled selected>
+                  Select the sales&apos; rep
+                </option>
+                <option>Matt</option>
+                <option>Bill</option>
+                <option>Steve</option>
+                <option>Kevin</option>
+                <option>Dan</option>
+                <option>Maryah</option>
+                <option>Stock</option>
+              </select>
+              <input type="number" placeholder="Quantity" required />
+              <select>
+                <option value="" disabled selected>Select the material</option>
+                <option>Carpet</option>
+                <option>Underlay</option>
+                <option>Skids</option>
+                <option>Pallets</option>
+                <option>Adhesive</option>
+                <option>Boxes</option>
+                <option>ُSamples</option>
+              </select>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="weekly-chart">
+          <div>
+            <canvas id="activityChart" width="400" height="200"></canvas>
+          </div>
+          <div>
+            <canvas id="underlayPieChart" width="300" height="300"></canvas>
+          </div>
+        </section>
+      </main>
+      <section id="blockquote-section-materials">
+        <blockquote>
+          We are committed to providing high-quality materials and exceptional
+          service — from flooring and carpet to underlay, adhesives,
+          installation, and design.
+          <cite>— Amir Hashemifar</cite>
+        </blockquote>
+      </section>
+      <footer>
+        <p>© 2025 Ethical Flooring Warehouse | Managed by Amir Hashemifar</p>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <script src="./javasript/chart.js"></script>
+      <script src="./javasript/underlaypiechart.js"></script>
+    </div>
+  </body>
+</html>

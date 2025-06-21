@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/sales.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sales Associates</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sales Representatives</title>
+        <link rel="stylesheet" href="../css/style.css" />
+      </head>
+      <body>
+        <div id="wrapper">
+        <header>
+          <img
+            class="image-logo-header"
+            src="../images/dashboard-logo.png"
+            alt="dashboard-logo"
+          />
+          <h1>Flooring Warehouse Manager</h1>
+        </header>
+        <nav>
+          <ul class="nav-ul">
+            <li>
+              <a href="../index.html"
+                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="../receiving/receiving.html"
+                ><i class="fas fa-dolly"></i> Receiving</a
+              >
+            </li>
+            <li>
+              <a href="../shipping/shipping.html"
+                ><i class="fas fa-truck"></i> Ship</a
+              >
+            </li>
+            <li>
+              <a href="../inventory/inventory.html"
+                ><i class="fas fa-boxes"></i> Inventory</a
+              >
+            </li>
+            <li>
+              <a href="../report/report.html"
+                ><i class="fas fa-file-alt"></i> Reports</a
+              >
+            </li>
+            <li>
+              <a href="../reps/reps.html" class="active-menu"
+                ><i class="fas fa-users"></i> Sales Reps</a
+              >
+            </li>
+            <li>
+              <a href="../materials/materials.html"
+                ><i class="fas fa-cubes"></i> Materials</a
+              >
+            </li>
+            <li><a href="../lorem-ipsum/lorem.html">Lorem ipsum</a></li>
+          </ul>
+        </nav>
+
+        <main>
+          <section id="sales">
+            <h2>Sales Representatives</h2>
+
+            <!-- Sales Rep Selection -->
+            <div class="sales-list">
+              <button data-rep="kevin">Kevin Kupershmith</button>
+              <button data-rep="matt">Matt Rodin</button>
+              <button data-rep="steve">Steve Filziwer</button>
+              <button data-rep="daniel">Daniel Silva</button>
+              <button data-rep="bill">Bill Pearson</button>
+              <button data-rep="maryah">Maryah Paul</button>
+              <button data-rep="raitis">Raitis Puntis</button>
+            </div>
+
+            <!-- Rep Info + Materials -->
+            <div class="rep-details" id="repDetails">
+              <h3>Select a Sales Rep to view details</h3>
+            </div>
+          </section>
+        </main>
+
+        <footer>
+          <p>© 2025 Ethical Flooring Warehouse</p>
+        </footer>
+
+        <!-- JS to handle selection -->
+        <script>
+          const repsData = {
+            matt: {
+              contact: "matt@ethicalflooring.ca",
+              jobs: "#234, #239",
+              materials: [
+                {
+                  name: "Foam Underlay",
+                  category: "Underlays",
+                  quantity: 100,
+                  unit: "Rolls",
+                },
+                {
+                  name: "Grey Wool Carpet",
+                  category: "Carpets",
+                  quantity: 120,
+                  unit: "Rolls",
+                },
+                {
+                  name: "Classic Vinyl",
+                  category: "Vinyl Sheets",
+                  quantity: 60,
+                  unit: "Rolls",
+                },
+              ],
+            },
+            daniel: {
+              contact: "dan@ethicalflooring.ca",
+              jobs: "#240",
+              materials: [
+                {
+                  name: "GlueMax Pro",
+                  category: "Adhesives",
+                  quantity: 80,
+                  unit: "Gallons",
+                },
+                {
+                  name: "Oak Planks",
+                  category: "Hardwood Flooring",
+                  quantity: 250,
+                  unit: "Sq ft",
+                },
+              ],
+            },
+            kevin: {
+              contact: "kevin@ethicalflooring.ca",
+              jobs: "#229",
+              materials: [
+                {
+                  name: "Bona R-851",
+                  category: "Adhesives",
+                  quantity: 14,
+                  unit: "Pails",
+                },
+                {
+                  name: "Vinyl Sheet",
+                  category: "Vinyl",
+                  quantity: 250,
+                  unit: "Sq ft",
+                },
+              ],
+            },
+          };
+
+          const buttons = document.querySelectorAll(".sales-list button");
+          const repDetails = document.getElementById("repDetails");
+
+          buttons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const repName = btn.dataset.rep;
+              const rep = repsData[repName];
+              repDetails.innerHTML = `
+          <h3>${repName}</h3>
+          <p><strong>Contact:</strong> ${rep.contact}</p>
+          <p><strong>Assigned Jobs:</strong> ${rep.jobs}</p>
+          <h4>Materials in Stock</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rep.materials
+                .map(
+                  (item) => `
+                <tr>
+                  <td>${item.name}</td>
+                  <td>${item.category}</td>
+                  <td>${item.quantity}</td>
+                  <td>${item.unit}</td>
+                </tr>`
+                )
+                .join("")}
+            </tbody>
+          </table>
+        `;
+            });
+          });
+        </script>
+      </body>
+      </div>
+    </html>
+  
