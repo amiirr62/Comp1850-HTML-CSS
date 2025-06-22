@@ -5,7 +5,11 @@
 
 
 
-
+a:visited {
+  color: #1dcaca;
+  
+               /* Gray (visited links) */
+}
 
   html, body {
     height: 100%;
@@ -21,10 +25,7 @@
   main {
     flex: 1;
   }
- a:{
-    color: #27db03;
-    background-color: grey;
- }
+ 
 
   section {
     display: flex;
@@ -47,7 +48,7 @@
     max-width: 90%;
     box-sizing: border-box;
     background-color: #fff8dc;       /* Light yellow background */
-    border: 2px dashed #ff8c00;      /* Orange dashed border */
+    border-radius: 20px;
     margin-left: 0px;                 /* Space between articles */
     margin-top:50px ;
     padding: 10px;
@@ -67,36 +68,7 @@
     text-align: center;
   }
   
-  .footer-container {
-    display: flex;
-    justify-content: space-between; /* even spacing across */
-    flex-wrap: wrap; /* handles smaller screens */
-  }
   
-  .footer-column {
-    flex: 1 1 45%;
-    margin: 10px;
-  }
-  
-  .footer-column h2 {
-    margin-bottom: 10px;
-    color: #ffcc00;
-  }
-  
-  .footer-column ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .footer-column a {
-    color: #ccc;
-    text-decoration: none;
-  }
-  
-  .footer-column a:hover {
-    text-decoration: underline;
-  }
-
   .checkmark-ul {
     list-style-image:url("./image/check-mark.jpg");
   }

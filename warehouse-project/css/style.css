@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+
   margin: 0px;
   padding: 0px;
 }
@@ -17,17 +18,19 @@ a:link {
 }
 
 a:visited {
-  color: #f5f8f8;               /* Gray (visited links) */
+  color: #54b6b6;
+  
+               /* Gray (visited links) */
 }
 
 a:hover {
   color: #59da39;  
   font-size: 1.05em;             /* Green (hover) */
-  text-decoration: underline;
+  
 }
 
 a:focus {
-  outline: 2px dashed #27ae60;
+  
   outline-offset: 3px;
   color: #27ae60;
 }
@@ -354,6 +357,12 @@ blockquote cite {
 
 }
 
+#lorem-image img {
+  border-radius: 50%;
+  shape-outside: circle(50%);
+}
+
+
 #receive-contents  {
  
 
@@ -366,11 +375,9 @@ table {
   
 }
 
-thead, tr, th {
-  background:linear-gradient(rgb(219, 216, 9),grey);
-  color: black;
-  font-size: 1.03em;
-}
+
+
+
 tbody,tr,td {
   color: black;
   background: linear-gradient(pink, grey);
@@ -381,7 +388,7 @@ th, td {
   text-align: center;
 }
 
-tbody tr:nth-child(even) {
+table tbody tr:nth-child(even) {
   background: #0f6ac5;
 }
 
@@ -766,18 +773,24 @@ th, td {
       padding:3px;
       border: 1px solid black;
   }
-  tr, td, thead, th{
-      background-color: #ebeeeb;
-      color:#674d3c;
-  }
+  
    
   
   thead  {
     text-align: center;
+    
   }
+ thead th {
+  color: rgb(29, 28, 28);
+  background:linear-gradient( rgb(206, 101, 3) , rgb(130, 113, 223));
+ }
  
- 
-
+tbody tr:nth-of-type(even) {
+  background-color:lightcyan;
+}
+tbody tr:nth-of-type(odd) {
+  background-color:lightgoldenrodyellow;
+}
 
 }
 
