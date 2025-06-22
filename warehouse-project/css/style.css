@@ -210,12 +210,10 @@ font-weight: bold;
   
 }
 
-.add-remove-form {
-  background: linear-gradient(circle at top left, #034108 , #858383);
- margin-left: 0px;
-}
+
 .add-remove-form form {
   background:linear-gradient(45deg, rgb(224, 210, 3) , rgb(10, 64, 212));
+  
 }
 .add-remove-form h3 {
   text-align: center;
@@ -337,8 +335,8 @@ margin-bottom: 10px;
   grid-template-columns: repeat(4,1fr);
 }
 
-#blockquote-section-materials {
-  blockquote {
+#blockquote-section-materials blockquote {
+  
   background: linear-gradient(45deg, green , grey);
   border-left: 6px solid #216a99;
   padding: 16px 20px;
@@ -349,7 +347,7 @@ margin-bottom: 10px;
   position: relative;
 }
 
-blockquote cite {
+ #blockquote-section-materials cite {
   display: block;
   margin-top: 12px;
   font-size: 0.9em;
@@ -358,18 +356,21 @@ blockquote cite {
   text-align: right;
 }
 
-}
+
 
 #lorem-image img {
-  border-radius: 50%;
-  shape-outside: circle(50%);
+  border-radius: 80%;
+  float: left;
+  
+  
+ 
 }
 
 
-#receive-contents  {
+#receive-contents  table{
  
 
-table {
+ 
   width: 100%;
   border-collapse: collapse;
   
@@ -401,7 +402,7 @@ img {
   border-radius: 5px;
   object-fit: cover;
 }
-}
+
 .receiving-main-sections {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -486,7 +487,7 @@ img {
 .rep-card:hover {
   background-color: #4a148c;
   color: white;
-  border-color: #4a148c;
+  border-color: #d3bdee;
   transform: translateY(-4px);
   box-shadow: 0 4px 8px rgba(74, 20, 140, 0.3);
   font-size: 1.5em;
@@ -760,10 +761,15 @@ th, td {
   
   align-content: center;
   padding: 10px;
-  background: linear-gradient(circle at top left, #858383, #034108);
+  background: linear-gradient(45deg, #858383, #034108);
   
 }
 
+.article-h2 h2 {
+  
+  text-align: center;
+  
+}
   
  .add-remove-form form {
   margin-top: 0px;

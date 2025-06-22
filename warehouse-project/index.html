@@ -71,8 +71,8 @@
 
       <main>
         <div id="status-div-section">
-          <p>Today's Status:</p>
-          <section id="short-info-horz-bar">
+          <h2>Today's Status:</h2>
+          <div id="short-info-horz-bar">
             <div>
               <img
                 class="logo-adjust-size"
@@ -97,13 +97,13 @@
               />
               <p>Shipping&#58;&nbsp;2</p>
             </div>
-          </section>
+          </div>
         </div>
 
-        <section id="current-stock">
+        <div id="current-stock">
           <div class="stock-div">
+            <h2>Current Stock</h2>
             <table>
-              <h2>Current Stock</h2>
               <thead>
                 <tr>
                   <th>Image</th>
@@ -204,6 +204,7 @@
                 <option>Stock</option>
               </select>
               <input type="number" placeholder="Quantity" required />
+
               <select>
                 <option value="" disabled selected>Select the material</option>
                 <option>Carpet</option>
@@ -212,30 +213,33 @@
                 <option>Pallets</option>
                 <option>Adhesive</option>
                 <option>Boxes</option>
-                <option>ُSamples</option>
+                <option>Sample</option>
               </select>
+
               <button type="submit">Submit</button>
             </form>
           </div>
-        </section>
+        </div>
 
-        <section class="weekly-chart">
-          <article id="activitychart-div">
+        <div class="weekly-chart">
+          <div id="activitychart-div">
             <canvas id="activityChart" width="400" height="200"></canvas>
-          </article>
-          <article id="underlaypiechart-div">
+          </div>
+          <div id="underlaypiechart-div">
             <canvas id="underlayPieChart" width="300" height="300"></canvas>
-          </article>
-        </section>
+          </div>
+        </div>
       </main>
-      <section id="blockquote-section-materials">
+
+      <div id="blockquote-section-materials">
         <blockquote>
           We are committed to providing high-quality materials and exceptional
           service — from flooring and carpet to underlay, adhesives,
           installation, and design.
           <cite>— Amir Hashemifar</cite>
         </blockquote>
-      </section>
+      </div>
+      
       <footer class="site-footer">
         <section class="footer-project">
           <h2>COMP 1850 | Flooring Warehouse Manager</h2>

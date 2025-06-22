@@ -12,221 +12,214 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Report</title>
   </head>
+
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Warehouse Reports</title>
-        <link rel="stylesheet" href="../css/style.css" />
-      </head>
-      <body>
-        <div id="wrapper">
-        <header>
-          <img
-            class="image-logo-header"
-            src="../images/dashboard-logo.png"
-            alt="dashboard-logo"
-          />
-          <h1>Flooring Warehouse Manager</h1>
-        </header>
-         <nav class="navbar">
-          <div class="burger" id="burger"> &#9776; </div>
-            <ul class="nav-ul" id="nav-ul">
-            <li>
-              <a href="../index.html"
-                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
-              >
-            </li>
-            <li>
-              <a href="../receiving/receiving.html"
-                ><i class="fas fa-dolly"></i> Receiving</a
-              >
-            </li>
-            <li>
-              <a href="../shipping/shipping.html"
-                ><i class="fas fa-truck"></i> Ship</a
-              >
-            </li>
-            <li>
-              <a href="../inventory/inventory.html"
-                ><i class="fas fa-boxes"></i> Inventory</a
-              >
-            </li>
-            <li>
-              <a href="../report/report.html" class="active-menu"
-                ><i class="fas fa-file-alt"></i> Reports</a
-              >
-            </li>
-            <li>
-              <a href="../reps/reps.html"
-                ><i class="fas fa-users"></i> Sales Reps</a
-              >
-            </li>
-            <li>
-              <a href="../materials/materials.html"
-                ><i class="fas fa-cubes"></i> Materials</a
-              >
-            </li>
-            <li><a href="../lorem-ipsum/lorem.html">Lorem ipsum</a></li>
-          </ul>
-        </nav>
-        <main>
-          <section id="reports">
-            <h2>Inventory & Sales Rep Report</h2>
+    <div id="wrapper">
+      <header>
+        <img
+          class="image-logo-header"
+          src="../images/dashboard-logo.png"
+          alt="dashboard-logo"
+        />
+        <h1>Flooring Warehouse Manager</h1>
+      </header>
+      <nav class="navbar">
+        <div class="burger" id="burger">&#9776;</div>
+        <ul class="nav-ul" id="nav-ul">
+          <li>
+            <a href="../index.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="../receiving/receiving.html"
+              ><i class="fas fa-dolly"></i> Receiving</a
+            >
+          </li>
+          <li>
+            <a href="../shipping/shipping.html"
+              ><i class="fas fa-truck"></i> Ship</a
+            >
+          </li>
+          <li>
+            <a href="../inventory/inventory.html"
+              ><i class="fas fa-boxes"></i> Inventory</a
+            >
+          </li>
+          <li>
+            <a href="../report/report.html" class="active-menu"
+              ><i class="fas fa-file-alt"></i> Reports</a
+            >
+          </li>
+          <li>
+            <a href="../reps/reps.html"
+              ><i class="fas fa-users"></i> Sales Reps</a
+            >
+          </li>
+          <li>
+            <a href="../materials/materials.html"
+              ><i class="fas fa-cubes"></i> Materials</a
+            >
+          </li>
+          <li><a href="../lorem-ipsum/lorem.html">Lorem ipsum</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section id="reports">
+          <h2>Inventory & Sales Rep Report</h2>
 
-            <!-- Filter by Sales Rep -->
-            <div class="filter-section">
-              <label for="repFilter">Filter by Sales Rep:</label>
-              <select id="repFilter">
-                <option value="all">All</option>
-                <option value="matt">Matt</option>
-                <option value="kevin">Kevin</option>
-                <option value="steve">Steve</option>
-                <option value="bill">Bill</option>
-                <option value="maryah">Maryah</option>
-                <option value="raitis">Raitis</option>
-                <option value="daniel">Daniel</option>
-              </select>
-              <button onclick="window.print()">🖨️ Print Report</button>
+          <!-- Filter by Sales Rep -->
+          <div class="filter-section">
+            <label for="repFilter">Filter by Sales Rep:</label>
+            <select id="repFilter">
+              <option value="all">All</option>
+              <option value="matt">Matt</option>
+              <option value="kevin">Kevin</option>
+              <option value="steve">Steve</option>
+              <option value="bill">Bill</option>
+              <option value="maryah">Maryah</option>
+              <option value="raitis">Raitis</option>
+              <option value="daniel">Daniel</option>
+            </select>
+            <button onclick="window.print()">🖨️ Print Report</button>
+          </div>
+
+          <!-- Report Content -->
+          <div id="reportContent">
+            <div class="rep-section" data-rep="matt">
+              <h3>Matt</h3>
+              <p><strong>Assigned Jobs:</strong> #234, #239</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Foam Underlay</td>
+                    <td>Underlays</td>
+                    <td>100</td>
+                    <td>Rolls</td>
+                  </tr>
+                  <tr>
+                    <td>Grey Wool Carpet</td>
+                    <td>Carpets</td>
+                    <td>120</td>
+                    <td>Rolls</td>
+                  </tr>
+                  <tr>
+                    <td>Classic Vinyl</td>
+                    <td>Vinyl Sheets</td>
+                    <td>60</td>
+                    <td>Rolls</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <!-- Report Content -->
-            <div id="reportContent">
-              <div class="rep-section" data-rep="matt">
-                <h3>Matt</h3>
-                <p><strong>Assigned Jobs:</strong> #234, #239</p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Material</th>
-                      <th>Category</th>
-                      <th>Quantity</th>
-                      <th>Unit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Foam Underlay</td>
-                      <td>Underlays</td>
-                      <td>100</td>
-                      <td>Rolls</td>
-                    </tr>
-                    <tr>
-                      <td>Grey Wool Carpet</td>
-                      <td>Carpets</td>
-                      <td>120</td>
-                      <td>Rolls</td>
-                    </tr>
-                    <tr>
-                      <td>Classic Vinyl</td>
-                      <td>Vinyl Sheets</td>
-                      <td>60</td>
-                      <td>Rolls</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="rep-section" data-rep="kevin">
-                <h3>Kevin</h3>
-                <p><strong>Assigned Jobs:</strong> #240</p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Material</th>
-                      <th>Category</th>
-                      <th>Quantity</th>
-                      <th>Unit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>GlueMax Pro</td>
-                      <td>Adhesives</td>
-                      <td>80</td>
-                      <td>Gallons</td>
-                    </tr>
-                    <tr>
-                      <td>Oak Planks</td>
-                      <td>Hardwood Flooring</td>
-                      <td>250</td>
-                      <td>Sq ft</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="rep-section" data-rep="steve">
-                <h3>Steve</h3>
-                <p><strong>Assigned Jobs:</strong> #240</p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Material</th>
-                      <th>Category</th>
-                      <th>Quantity</th>
-                      <th>Unit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Hardwood Flooring</td>
-                      <td>Marage</td>
-                      <td>1200</td>
-                      <td>Square Feet</td>
-                    </tr>
-                    <tr>
-                      <td>Red Oak Planks</td>
-                      <td>Hardwood Flooring</td>
-                      <td>950</td>
-                      <td>Sq ft</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="rep-section" data-rep="bill">
-                <h3>Bill</h3>
-                <p><strong>Assigned Jobs:</strong> #185</p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Material</th>
-                      <th>Category</th>
-                      <th>Quantity</th>
-                      <th>Unit</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Adhesives</td>
-                      <td>Bona-R851</td>
-                      <td>7</td>
-                      <td>Pails</td>
-                    </tr>
-                    <tr>
-                      <td>Unifloor planks</td>
-                      <td>Vinyl Flooring</td>
-                      <td>1800</td>
-                      <td>Sq ft</td>
-                    </tr>
-                    <tr>
-                      <td>Blue Healthier Choice</td>
-                      <td>Underlay</td>
-                      <td>4</td>
-                      <td>rolls</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="rep-section" data-rep="kevin">
+              <h3>Kevin</h3>
+              <p><strong>Assigned Jobs:</strong> #240</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>GlueMax Pro</td>
+                    <td>Adhesives</td>
+                    <td>80</td>
+                    <td>Gallons</td>
+                  </tr>
+                  <tr>
+                    <td>Oak Planks</td>
+                    <td>Hardwood Flooring</td>
+                    <td>250</td>
+                    <td>Sq ft</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </section>
-        </main>
 
-        <footer class="site-footer">
+            <div class="rep-section" data-rep="steve">
+              <h3>Steve</h3>
+              <p><strong>Assigned Jobs:</strong> #240</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Hardwood Flooring</td>
+                    <td>Marage</td>
+                    <td>1200</td>
+                    <td>Square Feet</td>
+                  </tr>
+                  <tr>
+                    <td>Red Oak Planks</td>
+                    <td>Hardwood Flooring</td>
+                    <td>950</td>
+                    <td>Sq ft</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="rep-section" data-rep="bill">
+              <h3>Bill</h3>
+              <p><strong>Assigned Jobs:</strong> #185</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Material</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Adhesives</td>
+                    <td>Bona-R851</td>
+                    <td>7</td>
+                    <td>Pails</td>
+                  </tr>
+                  <tr>
+                    <td>Unifloor planks</td>
+                    <td>Vinyl Flooring</td>
+                    <td>1800</td>
+                    <td>Sq ft</td>
+                  </tr>
+                  <tr>
+                    <td>Blue Healthier Choice</td>
+                    <td>Underlay</td>
+                    <td>4</td>
+                    <td>rolls</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
         <!-- 1. Social media links (stacked) -->
         <div class="footer-social">
           <a
@@ -242,7 +235,7 @@
 
         <!-- 2. COMP 1850 final-project summary -->
         <section class="footer-project">
-         <h2>COMP 1850  | Flooring Warehouse Manager</h2>
+          <h2>COMP 1850 | Flooring Warehouse Manager</h2>
         </section>
 
         <!-- 3. Contact -->
@@ -254,25 +247,24 @@
         </address>
       </footer>
 
-        <!-- Script -->
-        <script>
-          const repFilter = document.getElementById("repFilter");
-          const sections = document.querySelectorAll(".rep-section");
+      <!-- Script -->
+      <script>
+        const repFilter = document.getElementById("repFilter");
+        const sections = document.querySelectorAll(".rep-section");
 
-          repFilter.addEventListener("change", () => {
-            const value = repFilter.value;
-            sections.forEach((section) => {
-              const rep = section.dataset.rep;
-              if (value === "all" || value === rep) {
-                section.style.display = "block";
-              } else {
-                section.style.display = "none";
-              }
-            });
+        repFilter.addEventListener("change", () => {
+          const value = repFilter.value;
+          sections.forEach((section) => {
+            const rep = section.dataset.rep;
+            if (value === "all" || value === rep) {
+              section.style.display = "block";
+            } else {
+              section.style.display = "none";
+            }
           });
-        </script>
-        <script src="../javasript/burger-menu-activation.js"></script>
-      </body>
-      </div>
-    </html>
- 
+        });
+      </script>
+      <script src="../javasript/burger-menu-activation.js"></script>
+    </div>
+  </body>
+</html>
