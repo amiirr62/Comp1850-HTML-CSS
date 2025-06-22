@@ -25,8 +25,9 @@
         />
         <h1>Flooring Warehouse Manager</h1>
       </header>
-      <nav>
-        <ul class="nav-ul">
+      <nav class="navbar">
+        <div class="burger" id="burger">&#9776;</div>
+        <ul class="nav-ul" id="nav-ul">
           <li>
             <a href="../index.html"
               ><i class="fas fa-tachometer-alt"></i> Dashboard</a
@@ -65,241 +66,271 @@
           <li><a href="../lorem-ipsum/lorem.html">Lorem ipsum</a></li>
         </ul>
       </nav>
-      <div class="receiving-main-sections">
-        <section id="receive">
-          <h2>Shipping Materials</h2>
-          <form class="receive-form">
-            <label for="category">Category</label>
-            <select id="category" name="category" required>
-              <option value="">--Select Category--</option>
-              <option>Underlays</option>
-              <option>Adhesives</option>
-              <option>Carpets</option>
-              <option>Hardwood Flooring</option>
-              <option>Vinyl Sheets</option>
-              <option>Others</option>
-            </select>
+      <main>
+        <div class="receiving-main-sections">
+          <section id="receive">
+            <h2>Shipping Materials</h2>
+            <form class="receive-form">
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="">--Select Category--</option>
+                <option>Underlays</option>
+                <option>Adhesives</option>
+                <option>Carpets</option>
+                <option>Hardwood Flooring</option>
+                <option>Vinyl Sheets</option>
+                <option>Others</option>
+              </select>
 
-            <label for="materialName">Material Name</label>
-            <input
-              type="text"
-              id="materialName"
-              name="materialName"
-              placeholder="e.g. GlueMax Pro"
-              required
-            />
+              <label for="materialName">Material Name</label>
+              <input
+                type="text"
+                id="materialName"
+                name="materialName"
+                placeholder="e.g. GlueMax Pro"
+                required
+              />
 
-            <label for="quantity">Quantity</label>
-            <input
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              required
-            />
+              <label for="quantity">Quantity</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                required
+              />
 
-            <label for="unit">Unit</label>
-            <select id="unit" name="unit" required>
-              <option value="">--Select Unit--</option>
-              <option>Rolls</option>
-              <option>Sq ft</option>
-              <option>Gallons</option>
-              <option>Boxes</option>
-            </select>
+              <label for="unit">Unit</label>
+              <select id="unit" name="unit" required>
+                <option value="">--Select Unit--</option>
+                <option>Rolls</option>
+                <option>Sq ft</option>
+                <option>Gallons</option>
+                <option>Boxes</option>
+              </select>
 
-            <label for="supplier">Supplier Name</label>
-            <input
-              type="text"
-              id="supplier"
-              name="supplier"
-              placeholder="e.g. Flooring Co."
-              required
-            />
+              <label for="supplier">Supplier Name</label>
+              <input
+                type="text"
+                id="supplier"
+                name="supplier"
+                placeholder="e.g. Flooring Co."
+                required
+              />
 
-            <label for="date">Date Shipped</label>
-            <input type="date" id="date" name="date" required />
+              <label for="date">Date Shipped</label>
+              <input type="date" id="date" name="date" required />
 
-            <label for="notes">Notes (optional)</label>
-            <textarea
-              id="notes"
-              name="notes"
-              rows="3"
-              placeholder="Any additional details..."
-            ></textarea>
+              <label for="notes">Notes (optional)</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="3"
+                placeholder="Any additional details..."
+              ></textarea>
 
-            <button type="submit">Shipped Material</button>
-          </form>
+              <button type="submit">Shipped Material</button>
+            </form>
+          </section>
+          <section id="receive-contents">
+            <h2>The Last 10 Shipped Items&#58;</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Picture</th>
+                  <th>Category</th>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Unit</th>
+                  <th>Rep</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example row -->
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/TrueMelodyCarpet.jpg"
+                      alt="Material 1"
+                    />
+                  </td>
+                  <td>Carpet</td>
+                  <td>True Melody</td>
+                  <td>1400</td>
+                  <td>SF</td>
+                  <td>Steve</td>
+                  <td>6/21/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/goldHC.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Underlay</td>
+                  <td>Gold Healthier Choice</td>
+                  <td>7</td>
+                  <td>Rolls</td>
+                  <td>Kevin</td>
+                  <td>6/21/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/GreenHC.webp"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Underlay</td>
+                  <td>Green Healthier Choice</td>
+                  <td>5</td>
+                  <td>Rolls</td>
+                  <td>Kevin</td>
+                  <td>6/21/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/TrueMelodyCarpet.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Carpet</td>
+                  <td>True Melody</td>
+                  <td>800</td>
+                  <td>SF</td>
+                  <td>Kevin</td>
+                  <td>6/20/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/VinylFlooringSPC.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Laminate Flooring</td>
+                  <td>SPC</td>
+                  <td>500</td>
+                  <td>SF</td>
+                  <td>Daniel</td>
+                  <td>6/19/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/LaminateFlooring.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Laminate Flooring</td>
+                  <td>SPC</td>
+                  <td>900</td>
+                  <td>SF</td>
+                  <td>Steve</td>
+                  <td>6/18/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/woolCarpet.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Carpet</td>
+                  <td>Wool</td>
+                  <td>1400</td>
+                  <td>SF</td>
+                  <td>Maryah</td>
+                  <td>6/18/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/TrueMelodyCarpet.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Carpet</td>
+                  <td>TrueMelody</td>
+                  <td>950</td>
+                  <td>SF</td>
+                  <td>Maryah</td>
+                  <td>6/18/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/LaminateFlooring.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Laminate Flooring</td>
+                  <td>SPC</td>
+                  <td>1400</td>
+                  <td>SF</td>
+                  <td>Raitis</td>
+                  <td>6/17/2025</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      class="receiving-images"
+                      src="../images/stock-materials/VinylFlooringSPC.jpg"
+                      alt="Material 2"
+                    />
+                  </td>
+                  <td>Vinyl Flooring</td>
+                  <td>SPC</td>
+                  <td>1400</td>
+                  <td>SF</td>
+                  <td>Raitis</td>
+                  <td>6/17/2025</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <!-- 1. Social media links (stacked) -->
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/amirhashemifar"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i><span>LinkedIn&nbsp;|</span>
+          </a>
+          <a href="https://github.com/amiirr62" class="social-link">
+            <i class="fab fa-github"></i><span>GitHub&nbsp;</span>
+          </a>
+        </div>
+
+        <!-- 2. COMP 1850 final-project summary -->
+        <section class="footer-project">
+          <h2>COMP 1850  | Flooring Warehouse Manager</h2>
         </section>
-        <section id="receive-contents">
-          <h2>The Last 10 Shipped Items&#58;</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Picture</th>
-                <th>Category</th>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Unit</th>
-                <th>Rep</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Example row -->
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/TrueMelodyCarpet.jpg"
-                    alt="Material 1"
-                  />
-                </td>
-                <td>Carpet</td>
-                <td>True Melody</td>
-                <td>1400</td>
-                <td>SF</td>
-                <td>Steve</td>
-                <td>6/21/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/goldHC.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Underlay</td>
-                <td>Gold Healthier Choice</td>
-                <td>7</td>
-                <td>Rolls</td>
-                <td>Kevin</td>
-                <td>6/21/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/GreenHC.webp"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Underlay</td>
-                <td>Green Healthier Choice</td>
-                <td>5</td>
-                <td>Rolls</td>
-                <td>Kevin</td>
-                <td>6/21/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/TrueMelodyCarpet.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Carpet</td>
-                <td>True Melody</td>
-                <td>800</td>
-                <td>SF</td>
-                <td>Kevin</td>
-                <td>6/20/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/VinylFlooringSPC.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Laminate Flooring</td>
-                <td>SPC</td>
-                <td>500</td>
-                <td>SF</td>
-                <td>Daniel</td>
-                <td>6/19/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/LaminateFlooring.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Laminate Flooring</td>
-                <td>SPC</td>
-                <td>900</td>
-                <td>SF</td>
-                <td>Steve</td>
-                <td>6/18/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/woolCarpet.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Carpet</td>
-                <td>Wool</td>
-                <td>1400</td>
-                <td>SF</td>
-                <td>Maryah</td>
-                <td>6/18/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/TrueMelodyCarpet.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Carpet</td>
-                <td>TrueMelody</td>
-                <td>950</td>
-                <td>SF</td>
-                <td>Maryah</td>
-                <td>6/18/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/LaminateFlooring.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Laminate Flooring</td>
-                <td>SPC</td>
-                <td>1400</td>
-                <td>SF</td>
-                <td>Raitis</td>
-                <td>6/17/2025</td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    class="receiving-images"
-                    src="../images/stock-materials/VinylFlooringSPC.jpg"
-                    alt="Material 2"
-                  />
-                </td>
-                <td>Vinyl Flooring</td>
-                <td>SPC</td>
-                <td>1400</td>
-                <td>SF</td>
-                <td>Raitis</td>
-                <td>6/17/2025</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </div>
+
+        <!-- 3. Contact -->
+        <address class="footer-contact">
+          <p>
+            Amir Hashemifar<br />
+            <a href="mailto:AHashemifar1@my.bcit.ca">AHashemifar1@my.bcit.ca</a>
+          </p>
+        </address>
+      </footer>
     </div>
+    <script src="../javasript/burger-menu-activation.js"></script>
   </body>
 </html>

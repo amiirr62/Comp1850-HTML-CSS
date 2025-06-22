@@ -28,7 +28,9 @@ a:hover {
   font-size: 1.05em;             /* Green (hover) */
   
 }
-
+.nav-ul a {
+  text-decoration: none;
+}
 a:focus {
   
   outline-offset: 3px;
@@ -80,7 +82,7 @@ body {
 }
 header {
   display: flex;
- ;
+ 
 
   background: linear-gradient(to right, green, black);
   width: 100%;
@@ -180,9 +182,10 @@ font-weight: bold;
   margin-top: 0px;
   padding: 0px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  grid-gap:0;
   
 }
 #current-stock table {
@@ -216,7 +219,7 @@ font-weight: bold;
 }
 .add-remove-form h3 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: rgb(238, 236, 236);
   
   margin-bottom: 0px;
@@ -240,7 +243,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 input, select, button {
@@ -661,10 +664,13 @@ img {
         /*
       use CSS to add table field headings with each record data point	  
         */
-      td:nth-of-type(1):before { content: "Product: ";   font-weight:bold; }
-      td:nth-of-type(2):before { content: "Item-name: ";    font-weight:bold;}
-      td:nth-of-type(3):before { content: "Quantity: ";   font-weight:bold;}  
-      td:nth-of-type(4):before { content: "Sales-Rep: ";    font-weight:bold;}  
+      td:nth-of-type(1):before { content: "Image: ";   font-weight:bold; }
+      td:nth-of-type(2):before { content: "Product: ";   font-weight:bold; }
+      td:nth-of-type(3):before { content: "Item-name: ";    font-weight:bold;}
+      td:nth-of-type(4):before { content: "Quantity: ";   font-weight:bold;}  
+      td:nth-of-type(5):before { content: "Unit: ";   font-weight:bold;}  
+      td:nth-of-type(6):before { content: "Sales-Rep: ";    font-weight:bold;}  
+      td:nth-of-type(7):before { content: "Date: ";    font-weight:bold;}  
       
   
       /*
@@ -713,8 +719,12 @@ th, td {
 }
 
 
-@media (min-width:650px) {
-  
+@media (min-width:601px) {
+  .burger {
+   font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
   nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -722,12 +732,15 @@ th, td {
     line-height: 40px;
     list-style-type: none;
     border: none;
+    
   }
+  
   nav a {
     padding: 10px;
     border: none;
     font-weight: bold;
     color: white;
+    text-decoration: none;
   }
   #current-stock {
   margin-top: 0px;
@@ -751,12 +764,7 @@ th, td {
   
 }
 
-  .add-remove-form {
-    
-    
-    margin-right: 20px;
-    
-  }
+  
  .add-remove-form form {
   margin-top: 0px;
  }
@@ -795,6 +803,226 @@ tbody tr:nth-of-type(odd) {
 }
 
   
+@media screen and (min-width: 300px) and (max-width: 750px)
+
+/* index.html */
+{
+  .burger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.50em;
+    text-align: right;
+  }
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+      background: #444;
+    position: relative;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    
+    padding: 1rem;
+  }
+  footer h2 {
+    font-size: 0.85em;
+    font-weight:lighter;
+  }
+  footer a {
+    font-size: 0.8em;
+  }
+  footer i {
+    margin-top: 0px;
+    font-size: 1.2em;
+  }
+  .footer-social span {
+    margin-top: 0px;
+    font-size: 1em;
+    
+  }
+  #blockquote-section-materials {
+    font-size: 0.7em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .nav-ul.active {
+    display: flex;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 5px;
+    
+  }
+ body, #wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  header img {
+    width: 50px;
+    height: 50px;
+    
+  }
+  h1 {
+    font-size: 1em;
+  }
+
+  #status-div-section {
+    max-width: 100%;
+  }
+  #short-info-horz-bar img {
+    width: 30px;
+    height: 30px;
+  }
+  #short-info-horz-bar p {
+    font-size: .7em;
+  }
+
+  #current-stock {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+  }
+ .stock-div img {
+  width: 50px;
+  height: 50px;
+ }
+ #current-stock form {
+  display: flex;
+  margin-top: 0px ;
+  margin-left: 0px;
+  
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+
+}
+ .add-remove-form {
+  width:  100%;
+  display: flex;
+  
+  margin: 0px;
+  padding: 0px;
+  
+ }
+ 
+
+
+ .add-remove-form h3 {
+  display: block;
+ }
 
 
 
+ .weekly-chart {
+  display: block;
+  margin: 0;
+  padding: 0 ;
+ }
+ .weekly-chart-div{
+  flex: 1;
+  display: block;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+ }
+
+ #activityChart {
+  max-width: 300px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+ }
+
+ 
+/* receiving and Shipping */
+  .receiving-main-sections {
+    display: block;
+  }
+
+  /* Materials */
+  #materials-list {
+    display: block;
+  }
+
+  #loreum-nav-ul{
+    display: block;
+  }
+
+}
+
+
+@media screen and (min-width:751px) and (max-width: 950px)
+{
+#current-stock {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+ 
+}
+#current-stock table{
+ margin-left: 100px;
+}
+#current-stock h2 {
+  margin-left: 200px;
+}
+#current-stock form {
+  margin-right: 100px;
+  width: 350px;
+}
+.weekly-chart {
+  display: block;
+}
+/* receiving and Shipping */
+  .receiving-main-sections {
+    display: block;
+    
+  }
+
+  /* Materials */
+  #materials-list {
+    display: flex;
+    justify-content: center;
+  }
+  #receive form {
+   display: grid;
+   
+  }
+  .weekly-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 300px;
+    align-content: center;
+  }
+  #underlaypiechart-div {
+    
+    margin-left: 50px;
+    width: 400px;
+    height: 300px;
+  }
+  #activitychart-div {
+    align-content: center;
+    width: 400px;
+    height: 300px;
+    height: auto;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width:951px) {
+  .weekly-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 300px;
+    align-content: center;
+  }
+   #underlaypiechart-div {
+    
+    margin-left: 200px;
+    width: 400px;
+    height: 300px;
+  }
+  #activitychart-div {
+    
+    margin-left: 50px;
+  }
+}

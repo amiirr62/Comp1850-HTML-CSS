@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -26,8 +27,9 @@
         />
         <h1>Flooring Warehouse Manager</h1>
       </header>
-      <nav>
-        <ul class="nav-ul">
+      <nav class="navbar">
+        <div class="burger" id="burger">&#9776;</div>
+        <ul class="nav-ul" id="nav-ul">
           <li>
             <a href="./index.html" class="active-menu"
               ><i class="fas fa-tachometer-alt"></i> Dashboard</a
@@ -77,7 +79,7 @@
                 src="./images/scheduled-icon.png"
                 alt="scheduled-icon"
               />
-              <p>Total Scheduled : 7</p>
+              <p>Scheduled&#58;&nbsp;7</p>
             </div>
             <div>
               <img
@@ -85,7 +87,7 @@
                 src="./images/receiving-icon.png"
                 alt="receiving-icon"
               />
-              <p>Total Receiving : 4</p>
+              <p>Receiving&#58;&nbsp;4</p>
             </div>
             <div>
               <img
@@ -93,7 +95,7 @@
                 src="./images/shipping-icon.png"
                 alt="shipping-icon"
               />
-              <p>Total Shipping : 2</p>
+              <p>Shipping&#58;&nbsp;2</p>
             </div>
           </section>
         </div>
@@ -218,12 +220,12 @@
         </section>
 
         <section class="weekly-chart">
-          <div>
+          <article id="activitychart-div">
             <canvas id="activityChart" width="400" height="200"></canvas>
-          </div>
-          <div>
+          </article>
+          <article id="underlaypiechart-div">
             <canvas id="underlayPieChart" width="300" height="300"></canvas>
-          </div>
+          </article>
         </section>
       </main>
       <section id="blockquote-section-materials">
@@ -234,14 +236,35 @@
           <cite>— Amir Hashemifar</cite>
         </blockquote>
       </section>
-      <footer>
-        <p>© 2025 Ethical Flooring Warehouse | Managed by Amir Hashemifar</p>
+      <footer class="site-footer">
+        <section class="footer-project">
+          <h2>COMP 1850 | Flooring Warehouse Manager</h2>
+        </section>
+
+        <address class="footer-contact">
+          <p>
+            Amir Hashemifar<br />
+            <a href="mailto:AHashemifar1@my.bcit.ca">AHashemifar1@my.bcit.ca</a>
+          </p>
+        </address>
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/amirhashemifar"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i><span>&nbsp;LinkedIn&nbsp;|</span>
+          </a>
+          <a href="https://github.com/amiirr62" class="social-link">
+            <i class="fab fa-github"></i><span>&nbsp;GitHub&nbsp;</span>
+          </a>
+        </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
       <script src="./javasript/chart.js"></script>
       <script src="./javasript/underlaypiechart.js"></script>
+      <script src="./javasript/burger-menu-activation.js"></script>
     </div>
   </body>
 </html>

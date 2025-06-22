@@ -33,8 +33,9 @@
           />
           <h1>Flooring Warehouse Manager</h1>
         </header>
-        <nav>
-          <ul class="nav-ul">
+         <nav class="navbar">
+        <div class="burger" id="burger"> &#9776; </div>
+        <ul class="nav-ul" id="nav-ul">
             <li>
               <a href="../index.html"
                 ><i class="fas fa-tachometer-alt"></i> Dashboard</a
@@ -96,9 +97,33 @@
           </section>
         </main>
 
-        <footer>
-          <p>© 2025 Ethical Flooring Warehouse</p>
-        </footer>
+        <footer class="site-footer">
+        <!-- 1. Social media links (stacked) -->
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/amirhashemifar"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i><span>LinkedIn&nbsp;|</span>
+          </a>
+          <a href="https://github.com/amiirr62" class="social-link">
+            <i class="fab fa-github"></i><span>GitHub&nbsp;</span>
+          </a>
+        </div>
+
+        <!-- 2. COMP 1850 final-project summary -->
+        <section class="footer-project">
+          <h2>COMP 1850  | Flooring Warehouse Manager</h2>
+        </section>
+
+        <!-- 3. Contact -->
+        <address class="footer-contact">
+          <p>
+            Amir Hashemifar<br />
+            <a href="mailto:AHashemifar1@my.bcit.ca">AHashemifar1@my.bcit.ca</a>
+          </p>
+        </address>
+      </footer>
 
         <!-- JS to handle selection -->
         <script>
@@ -204,6 +229,7 @@
             });
           });
         </script>
+        <script src="../javasript/burger-menu-activation.js"></script>
       </body>
       </div>
     </html>
