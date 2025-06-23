@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>lorem ipsum</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./style-lorem.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../images/lorem-lorem.svg" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -14,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <title>lorem ipsum</title>
+    <link rel="stylesheet" href="../css/new-style.css" />
   </head>
   <body>
     <div id="wrapper">
@@ -63,16 +63,12 @@
               ><i class="fas fa-cubes"></i> Materials</a
             >
           </li>
-          <li>
-            <a href="../lorem-ipsum/lorem.html" class="active-menu"
-              >Lorem ipsum</a
-            >
-          </li>
+          <li><a href="./lorem.html" class="active-menu">Lorem ipsum</a></li>
         </ul>
       </nav>
       <main>
         <div>
-          <article>
+          <article id="loreum-first-article">
             <h2>Lorem ipsum dolor!</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -124,49 +120,59 @@
                 </p>
               </blockquote>
             </div>
+            <div class="div-h3-1">
+              <h3>Aenean commodo</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem.
+              </p>
+              <ol class="little-roman-type-ol">
+                <li>Lorem ipsum dolor sit amet consectetuer.</li>
+                <li>Aenean commodo ligula eget dolor.</li>
+                <li>Aenean massa cum sociis natoque penatibus.</li>
+              </ol>
+            </div>
 
-            <h3>Aenean commodo</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem.
-            </p>
-            <ol class="little-roman-type-ol">
-              <li>Lorem ipsum dolor sit amet consectetuer.</li>
-              <li>Aenean commodo ligula eget dolor.</li>
-              <li>Aenean massa cum sociis natoque penatibus.</li>
-            </ol>
-
-            <h3>Massa dolor</h3>
-            <p>
-              Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem.
-            </p>
-            <pre id="page2-pre-code"><code>/*Example CSS code*/
+            <div class="lorem-div-pre-code">
+              <h3>Massa dolor</h3>
+              <p>
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                pretium quis, sem.
+              </p>
+              <pre id="page2-pre-code"><code>/*Example CSS code*/
 h1{ 
 	background-color:blue;
 }</code></pre>
-            <h4>Massa dolor</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              tesque eu, pretium quis, sem.
-            </p>
+            </div>
 
-            <h5>Massa dolor</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem.
-            </p>
+            <div class="div-lorem-h4">
+              <h4>Massa dolor</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                tesque eu, pretium quis, sem.
+              </p>
+            </div>
 
-            <h6>Massa dolor</h6>
-            <p>Lorem ipsum dolor sit amet, sem.</p>
+            <div class="lorem-div-h5">
+              <h5>Massa dolor</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem.
+              </p>
+            </div>
+
+            <div class="lorem-div-h6">
+              <h6>Massa dolor</h6>
+              <p>Lorem ipsum dolor sit amet, sem.</p>
+            </div>
 
             <div class="div-table">
               <table class="data">
@@ -233,6 +239,8 @@ h1{
         </address>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="../javasript/burger-menu-activation.js"></script>
   </body>
 </html>

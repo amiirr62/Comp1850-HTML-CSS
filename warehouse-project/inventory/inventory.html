@@ -3,28 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+    
     <link rel="icon" href="../images/inventory-icon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+     <link rel="stylesheet" href="../css/new-style.css" />
     <title>Inventory</title>
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Inventory</title>
-        <link rel="stylesheet" href="style.css" />
-        <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-      </head>
-      <body>
+  
+     
         <div id="wrapper">
         <header>
           <img
@@ -80,7 +70,7 @@
           <section id="inventory">
             <h2>Inventory Overview</h2>
 
-            <!-- Filter -->
+            
             <div class="filter-section">
               <label for="filter">Filter by:</label>
               <select id="filter">
@@ -93,7 +83,7 @@
               </select>
             </div>
 
-            <!-- Inventory Table -->
+            
             <table id="inventoryTable">
               <thead>
                 <tr>
@@ -160,34 +150,31 @@
         </main>
 
         <footer class="site-footer">
-        <!-- 1. Social media links (stacked) -->
-        <div class="footer-social">
-          <a
-            href="https://www.linkedin.com/in/amirhashemifar"
-            class="social-link"
-          >
-            <i class="fab fa-linkedin"></i><span>LinkedIn&nbsp;|</span>
-          </a>
-          <a href="https://github.com/amiirr62" class="social-link">
-            <i class="fab fa-github"></i><span>GitHub&nbsp;</span>
-          </a>
-        </div>
+              
+          <section class="footer-project">
+            <h2>COMP 1850  | Flooring Warehouse Manager</h2>
+          </section>
 
-        <!-- 2. COMP 1850 final-project summary -->
-        <section class="footer-project">
-          <h2>COMP 1850  | Flooring Warehouse Manager</h2>
-        </section>
+          <address class="footer-contact">
+            <p>
+              Amir Hashemifar<br />
+              <a href="mailto:AHashemifar1@my.bcit.ca">AHashemifar1@my.bcit.ca</a>
+            </p>
+          </address>
+          <div class="footer-social">
+            <a
+              href="https://www.linkedin.com/in/amirhashemifar"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin"></i><span>LinkedIn&nbsp;|</span>
+            </a>
+            <a href="https://github.com/amiirr62" class="social-link">
+              <i class="fab fa-github"></i><span>GitHub&nbsp;</span>
+            </a>
+          </div>
+        </footer>
 
-        <!-- 3. Contact -->
-        <address class="footer-contact">
-          <p>
-            Amir Hashemifar<br />
-            <a href="mailto:AHashemifar1@my.bcit.ca">AHashemifar1@my.bcit.ca</a>
-          </p>
-        </address>
-      </footer>
-
-        <!-- Script -->
+        
         <script>
           const filterSelect = document.getElementById("filter");
           const rows = document.querySelectorAll("#inventoryTable tbody tr");

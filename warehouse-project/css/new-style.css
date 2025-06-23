@@ -296,6 +296,10 @@ footer {
 list-style-type: lower-alpha;
  list-style-image: none 
 }
+.materials-banner img {
+  width: 100%;
+  height: auto;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -408,7 +412,10 @@ img {
   grid-template-columns: 1fr 2fr;
   grid-gap:20px 20px;
 }
-
+ /* Materials */
+  #materials-list {
+    display: block;
+  }
 .receive-form {
   display: flex;
   flex-direction: column;
@@ -665,7 +672,8 @@ img {
         /*
       use CSS to add table field headings with each record data point	  
         */
-      td:nth-of-type(1):before { content: "Image: ";   font-weight:bold; }
+        #receive-contents {
+           td:nth-of-type(1):before { content: "Image: ";   font-weight:bold; }
       td:nth-of-type(2):before { content: "Product: ";   font-weight:bold; }
       td:nth-of-type(3):before { content: "Item-name: ";    font-weight:bold;}
       td:nth-of-type(4):before { content: "Quantity: ";   font-weight:bold;}  
@@ -673,7 +681,22 @@ img {
       td:nth-of-type(6):before { content: "Sales-Rep: ";    font-weight:bold;}  
       td:nth-of-type(7):before { content: "Date: ";    font-weight:bold;}  
       
-  
+        }
+     #inventoryTable , #reportContent {
+      td:nth-of-type(1):before { content: "Product: ";   font-weight:bold; }
+      td:nth-of-type(2):before { content: "Item-name: ";   font-weight:bold; }
+      td:nth-of-type(3):before { content: "Quantity: ";    font-weight:bold;}
+      td:nth-of-type(4):before { content: "Unit: ";   font-weight:bold;}  
+      td:nth-of-type(5):before { content: "Sales-Rep: ";   font-weight:bold;}  
+      
+     }
+      #repDetails {
+         td:nth-of-type(2):before { content: "Product: ";   font-weight:bold; }
+      td:nth-of-type(1):before { content: "Item-name: ";   font-weight:bold; }
+      td:nth-of-type(3):before { content: "Quantity: ";    font-weight:bold;}
+      td:nth-of-type(4):before { content: "Unit: ";   font-weight:bold;}  
+      td:nth-of-type(5):before { content: "Sales-Rep: ";   font-weight:bold;}  
+      }
       /*
       some adjustments to style
       (not critical to table responsiveness)
@@ -718,7 +741,111 @@ th, td {
   border: 1px solid #cccccc;
 }
 }
+@media (min-width:300px) {
+  #loreum-first-article h2 {
+  background-color: darkorange;
+  padding: 10px;
+  border-radius: 10px;
+  
+  
+}
+.div-h3-1 {
+  border: 2px dashed darkkhaki;
+  background: linear-gradient(120deg, green , grey);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+} 
+.div-h3-1 ol {
+  list-style-type: lower-roman;
+}
+.lorem-div-pre-code {
+  margin: 5px;
+  padding: 10px;
+  border: 2px dashed darkblue;
+  border-radius: 10px;
+  background: linear-gradient( rgb(211, 197, 2) , grey);
+}
+.lorem-div-pre-code pre {
+  border: 1px dotted rgb(160, 21, 155);
+  padding: 10px;
+  text-align: left;
+}
+.lorem-div-pre-code code {
+  
+  font-weight: bold;
+  font-size: 1.25em;
+  color: rgb(24, 23, 23);
+  background-color: rgb(72, 191, 228);
+}
+.div-lorem-h4 {
+  padding: 10px;
+  margin: 5px;
+  border: 2px dashed rgb(10, 121, 212);
+  border-radius: 10px  ;
+  background:linear-gradient(lime, yellow);
+}
+.lorem-div-h5 {
+  padding: 10px;
+  margin: 5px;
+  border: 2px dashed rgb(10, 121, 212);
+  border-radius: 10px  ;
+  background:linear-gradient(rgb(121, 5, 216), rgb(224, 11, 153));
+}
+.lorem-div-h6 {
+  padding: 10px;
+  margin: 5px;
+  border: 2px dashed rgb(10, 121, 212);
+  border-radius: 10px  ;
+  background:linear-gradient(rgb(37, 37, 37), rgb(224, 11, 153));
+  color: white;
+}
 
+.div-table table {
+  display: block;
+ border-collapse: collapse;
+ justify-content: center;
+ 
+}
+.div-table th {
+  background-color: lime;
+}
+
+.ads-images {
+  display: block;
+  
+}
+.ads-images img {
+  background: linear-gradient(45deg, lime , yellow);
+  width: 100%;
+}
+.checkmark-ul{
+  list-style-image: url('../lorem-ipsum/image/check-mark.jpg');
+}
+
+#lorem-image img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  shape-outside: circle(50%);
+}
+
+#blockquote-div blockquote{
+  display: block;
+  padding: 5px;
+  background-color:rgb(219, 14, 110);
+  font-weight:normal;
+  font-size: 1.2em;
+  border-radius: 20px;
+  box-shadow:20px 20px 20px rgb(80, 77, 77) ;
+  
+}
+#blockquote-div cite {
+  color: yellow;
+}
+/**********  **********/
+
+}
 
 @media (min-width:601px) {
   .burger {
@@ -749,7 +876,7 @@ th, td {
   display: grid;
   grid-template-columns: 1.4fr 1fr ;
   grid-template-rows: 450px;
-  gap: 20px ;
+  
   position: relative;
  
 }
@@ -765,9 +892,10 @@ th, td {
   
 }
 
-.article-h2 h2 {
+#materials-list h2 {
   
   text-align: center;
+  
   
 }
   
@@ -805,6 +933,10 @@ tbody tr:nth-of-type(even) {
 tbody tr:nth-of-type(odd) {
   background-color:lightgoldenrodyellow;
 }
+
+/********** Loreum Page **********/
+
+
 
 }
 
@@ -955,6 +1087,9 @@ tbody tr:nth-of-type(odd) {
     display: block;
   }
 
+  /* lorem */
+  
+
 }
 
 
@@ -985,6 +1120,13 @@ tbody tr:nth-of-type(odd) {
   }
 
   /* Materials */
+  .materials-banner {
+    display: block;
+    
+  }
+  .materials-banner img {
+    width: 100%;
+  }
   #materials-list {
     display: flex;
     justify-content: center;
@@ -1012,6 +1154,91 @@ tbody tr:nth-of-type(odd) {
     height: auto;
     margin-left: 50px;
   }
+
+  /* Loreum Page*/
+
+#loreum-first-article h2 {
+  background-color: darkorange;
+  padding: 10px;
+  border-radius: 10px;
+  
+  
+}
+.div-h3-1 {
+  border: 2px dashed darkkhaki;
+  background: linear-gradient(120deg, green , grey);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+} 
+.div-h3-1 ol {
+  list-style-type: lower-roman;
+}
+.lorem-div-pre-code {
+  margin: 5px;
+  padding: 10px;
+  border: 2px dashed darkblue;
+  border-radius: 10px;
+  background: linear-gradient( rgb(211, 197, 2) , grey);
+}
+.lorem-div-pre-code pre {
+  border: 1px dotted rgb(160, 21, 155);
+  padding: 10px;
+  text-align: left;
+}
+.lorem-div-pre-code code {
+  
+  font-weight: bold;
+  font-size: 1.25em;
+  color: rgb(24, 23, 23);
+  background-color: rgb(72, 191, 228);
+}
+.div-lorem-h4 {
+  padding: 10px;
+  margin: 5px;
+  border: 2px dashed rgb(10, 121, 212);
+  border-radius: 10px  ;
+  background:linear-gradient(lime, yellow);
+}
+.lorem-div-h5 {
+  padding: 10px;
+  margin: 5px;
+  border: 2px dashed rgb(10, 121, 212);
+  border-radius: 10px  ;
+  background:linear-gradient(rgb(121, 5, 216), rgb(224, 11, 153));
+}
+.lorem-div-h6 {
+  padding: 10px;
+  margin: 5px;
+  border: 2px dashed rgb(10, 121, 212);
+  border-radius: 10px  ;
+  background:linear-gradient(rgb(37, 37, 37), rgb(224, 11, 153));
+  color: white;
+}
+.div-table {
+  margin: 5px  ;
+  padding: 10px;
+}
+.div-table table {
+  display: flex;
+ border-collapse: collapse;
+ justify-content: center;
+ 
+}
+.div-table th {
+  background-color: lime;
+}
+.div-table th,tr,td {
+  padding: 10px;
+}
+.ads-images {
+  display: block;
+  
+}
+.ads-images img {
+  background: linear-gradient(45deg, lime , yellow);
+  width: 100%;
+}
 }
 
 @media screen and (min-width:951px) {
